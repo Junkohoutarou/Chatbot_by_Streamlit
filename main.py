@@ -18,12 +18,12 @@ st.title("""
          """)
 
 def get_text():
-    input_text = st.text_input("Ông chủ: ",)
+    input_text = st.text_input("User: ",)
     return input_text 
 
 user_input = get_text()
 
 if user_input:
-    st.text_area("Cô hầu:", value=generate_response(user_input), height=600, max_chars=None)
+    st.text_area("Chatbot:", value=generate_response(user_input), height=600, max_chars=None)
 else:
-    st.text_area("Cô hầu:", value="Xin mời ông chủ nhập vào!!!", height=600, max_chars=None)
+    st.text_area("Chatbot:", value="Xin mời ông chủ nhập vào!!!", height=600, max_chars=None)
