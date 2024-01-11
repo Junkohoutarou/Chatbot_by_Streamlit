@@ -6,13 +6,10 @@ openai.api_key = config.API_KEY
 
 def generate_response(prompt):
     stream = openai.ChatCompletion.create(
-        model="gpt-4",
-        messages=[
-            {"role": "system", "content": "You are a helpful assistant."},
-            {"role": "user", "content": prompt},
-        ]
-    )
-    
+        model="gpt-3.5-turbo",
+       prompt=prompt,
+        max_tokens=1024,
+        temperature=0.3)
     return stream['choices'][0]['message']['content']
 
 st.title("""
