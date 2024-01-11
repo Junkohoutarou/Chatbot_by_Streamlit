@@ -1,1 +1,1 @@
-API_KEY = "Your API key"
+API_KEY = "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"
