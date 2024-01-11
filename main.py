@@ -1,17 +1,22 @@
 import streamlit as st 
 import config 
-import openai 
+
 openai.api_key = config.API_KEY 
 
-def generate_response(prompt):
-     completion = openai.Completions.create(
-        engine="gpt-3.5-turbo-1106",
-        prompt=user_input,
-        max_tokens=100,
-        n=0.3,
-    )
-    return completion.choices[0].text
+import OpenAI from "openai";
 
+const openai = new OpenAI();
+
+async function main() {
+    const stream = await openai.chat.completions.create({
+        model: "gpt-4",
+        messages: [{ role: "user", content: "Say this is a test" }],
+        stream: true,
+    });
+    for await (const chunk of stream) {
+        process.stdout.write(chunk.choices[0]?.delta?.content || "");
+    }
+}
 st.title("""
          AI Chabot: Trợ lý của AI Coding
          Tôi sẽ trả lời mọi câu hỏi của bạn!!!
