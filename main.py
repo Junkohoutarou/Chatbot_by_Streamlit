@@ -4,19 +4,16 @@ import OpenAI
 
 openai.api_key = config.API_KEY 
 
+client = OpenAI()
 
-openai = openai.OpenAI(api_key=config.API_KEY) 
-
-def generate_response(user_input):
-    const stream = await openai.chat.completions.create({
-        model: "gpt-4",
-        messages: [{ role: "user", content: "Say this is a test" }],
-        stream: true,
-    });
-    for await (const chunk of stream) {
-        process.stdout.write(chunk.choices[0]?.delta?.content || "");
-    }
-
+stream = client.chat.completions.create(
+    model="gpt-4",
+    messages=[{"role": "user", "content": "Say this is a test"}],
+    stream=True,
+)
+for chunk in stream:
+    if chunk.choices[0].delta.content is not None:
+        print(chunk.choices[0].delta.content, end="")
 st.title("""
          AI Chabot: Trợ lý của AI Coding
          Tôi sẽ trả lời mọi câu hỏi của bạn!!!
