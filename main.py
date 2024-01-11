@@ -1,10 +1,10 @@
 import streamlit as st 
 import config 
-import OpenAI 
+import openai
 
 openai.api_key = config.API_KEY 
 
-client = OpenAI()
+client = openai()
 
 stream = client.chat.completions.create(
     model="gpt-4",
