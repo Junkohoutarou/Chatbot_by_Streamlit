@@ -5,7 +5,7 @@ import OpenAI
 openai.api_key = config.API_KEY 
 
 
-const openai = new OpenAI();
+openai = openai.OpenAI(api_key=config.API_KEY) 
 
 async function main() {
     const stream = await openai.chat.completions.create({
