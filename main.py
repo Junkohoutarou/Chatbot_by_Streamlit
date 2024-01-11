@@ -1,24 +1,23 @@
 import streamlit as st 
-import config 
-import openai
+from openai import OpenAI
 
-openai.api_key = config.API_KEY 
+# Chuyển khóa API cho đối tượng OpenAI client
+client = OpenAI(api_key="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")
 
 def generate_response(prompt):
-    stream = openai.ChatCompletion.create(
-        model="text-davinci-003",  # or use "gpt-4.0-turbo" for the latest model
+    response = client.completions.create(
+        model="davinci-002",  # hoặc sử dụng "gpt-4.0-turbo" cho mô hình mới nhất
         prompt=prompt,
-        max_tokens=150
+        max_tokens=150,
+        temperature=0.3
     )
-    return stream['choices'][0]['message']['content']
 
-st.title("""
-         AI Chatbot: Trợ lý của AI Coding
-         Tôi sẽ trả lời mọi câu hỏi của bạn!!!
-         """)
+    return response.choices[0].text
+
+st.title("AI Chatbot: Trợ lý của AI Coding")
 
 def get_text():
-    input_text = st.text_input("User: ",)
+    input_text = st.text_input("User: ")
     return input_text 
 
 user_input = get_text()
