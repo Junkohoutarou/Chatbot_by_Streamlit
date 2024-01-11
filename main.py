@@ -4,7 +4,7 @@ import openai
 openai.api_key = config.API_KEY 
 
 def generate_response(prompt):
-    completion = openai.Completion.create(engine="gpt-3.5-turbo-16k",
+    completion = openai.Completion.create(engine="gpt-3.5-turbo-1106",
                                           prompt=prompt,
                                           max_tokens=1024,
                                           temperature=0.3) 
