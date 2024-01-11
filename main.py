@@ -1,9 +1,9 @@
 import streamlit as st 
 import config 
+import OpenAI 
 
 openai.api_key = config.API_KEY 
 
-import OpenAI from "openai";
 
 const openai = new OpenAI();
 
