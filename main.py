@@ -4,12 +4,13 @@ import openai
 openai.api_key = config.API_KEY 
 
 def generate_response(prompt):
-    completion = openai.Completion.create(engine="gpt-3.5-turbo-1106",
-                                          prompt=prompt,
-                                          max_tokens=1024,
-                                          temperature=0.3) 
-    message = completion.choices[0].text 
-    return message 
+     completion = openai.Completions.create(
+        engine="gpt-3.5-turbo-1106",
+        prompt=user_input,
+        max_tokens=100,
+        n=0.3,
+    )
+    return completion.choices[0].text
 
 st.title("""
          AI Chabot: Trợ lý của AI Coding
