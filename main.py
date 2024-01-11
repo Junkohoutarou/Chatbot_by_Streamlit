@@ -1,6 +1,6 @@
 import streamlit as st 
 import config 
-from openai import openai 
+import openai 
 openai.api_key = config.API_KEY 
 
 def generate_response(prompt):
