@@ -4,18 +4,19 @@ import openai
 
 openai.api_key = config.API_KEY 
 
-client = openai()
+def generate_response(prompt):
+    stream = openai.ChatCompletion.create(
+        model="gpt-4",
+        messages=[
+            {"role": "system", "content": "You are a helpful assistant."},
+            {"role": "user", "content": prompt},
+        ]
+    )
+    
+    return stream['choices'][0]['message']['content']
 
-stream = client.chat.completions.create(
-    model="gpt-4",
-    messages=[{"role": "user", "content": "Say this is a test"}],
-    stream=True,
-)
-for chunk in stream:
-    if chunk.choices[0].delta.content is not None:
-        print(chunk.choices[0].delta.content, end="")
 st.title("""
-         AI Chabot: Trợ lý của AI Coding
+         AI Chatbot: Trợ lý của AI Coding
          Tôi sẽ trả lời mọi câu hỏi của bạn!!!
          """)
 
