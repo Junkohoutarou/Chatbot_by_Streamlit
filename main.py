@@ -11,6 +11,7 @@ def generate_response(prompt):
     )
     return response.choices[0].text
 
+
 st.title("AI Chatbot: Trợ lý của AI Coding")
 def get_text():
     input_text = st.text_input("User: ")
