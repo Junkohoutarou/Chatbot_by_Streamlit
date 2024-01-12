@@ -10,7 +10,6 @@ def generate_response(prompt):
         max_tokens=150,
         temperature=0.3
     )
-
     return response.choices[0].text
 
 st.title("AI Chatbot: Trợ lý của AI Coding")
