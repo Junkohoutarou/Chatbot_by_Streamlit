@@ -5,7 +5,6 @@ client = OpenAI(api_key="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")
 
 
 
-
 def generate_response(prompt):
     response = client.completions.create(
         model="davinci-002",  # hoặc sử dụng "gpt-4.0-turbo" cho mô hình mới nhất
