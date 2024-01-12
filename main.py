@@ -18,7 +18,6 @@ def get_text():
     return input_text 
 
 user_input = get_text()
-
 if user_input:
     st.text_area("Chatbot:", value=generate_response(user_input), height=600, max_chars=None)
 else:
