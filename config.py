@@ -1,1 +1,1 @@
-open_api_key = 'sk-p0JzJYjm2
+open_api_key = 'sk-p0JzJY
