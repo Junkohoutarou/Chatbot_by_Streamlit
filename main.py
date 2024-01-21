@@ -18,7 +18,6 @@ def openai_create(prompt):
     )
 
     return response.choices[0].text
-
 def chatgpt_clone(input, history):
     history = history or []
     s = list(sum(history, ()))
