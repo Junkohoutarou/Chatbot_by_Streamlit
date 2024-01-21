@@ -6,7 +6,6 @@ openai.api_key = open_api_key
 
 # openAI code
 
-
 def openai_create(prompt):
 
     response = openai.Completion.create(
