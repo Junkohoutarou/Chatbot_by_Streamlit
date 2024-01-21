@@ -28,7 +28,6 @@ def chatgpt_clone(input, history):
     history.append((input, output))
     return history, history
 
-
 # Streamlit App
 st.set_page_config(
     page_title="Streamlit Chat - Demo",
