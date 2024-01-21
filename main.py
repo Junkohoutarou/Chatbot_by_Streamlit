@@ -16,7 +16,6 @@ def openai_create(prompt):
         presence_penalty=0.6,
         stop=[" Human:", " AI:"]
     )
-
     return response.choices[0].text
 def chatgpt_clone(input, history):
     history = history or []
