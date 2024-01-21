@@ -3,7 +3,6 @@ from streamlit_chat import message
 import openai
 from config import open_api_key
 openai.api_key = open_api_key
-
 # openAI code
 def openai_create(prompt):
 
