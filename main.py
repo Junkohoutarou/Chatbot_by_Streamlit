@@ -30,7 +30,6 @@ st.set_page_config(
     page_title="Streamlit Chat - Demo",
     page_icon=":robot:"
 )
-
 st.header("ChatGPT Clone with Streamlit")
 
 history_input = []
