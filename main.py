@@ -46,7 +46,6 @@ def get_text():
 
 user_input = get_text()
 
-
 if user_input:
     output = chatgpt_clone(user_input, history_input)
     history_input.append([user_input, output])
