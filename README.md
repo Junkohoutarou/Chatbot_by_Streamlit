@@ -15,8 +15,7 @@ This project implements a responsive chatbot using the ChatGPT 3.5 API through S
    ```bash
    git clone https://github.com/yourusername/streamlit-chatbot.git
 2. **Install Dependencies:**
-```bash
+   ```bash
    pip install -r requirements.txt
-```
 3. **Obtain ChatGPT 3.5 API Key:**
 Sign up on the OpenAI platform and obtain the ChatGPT 3.5 API key. Replace 'YOUR_API_KEY' in the code with your actual key.
