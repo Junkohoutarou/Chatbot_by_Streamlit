@@ -22,4 +22,6 @@ This project implements a responsive chatbot using the ChatGPT 3.5 API through S
 4. **Run the Streamlit App:**
    ```bash
    streamlit run main.py
+Usage
 
+Simply type your questions or requests into the provided text input, and the chatbot responds in real-time. The conversation history is displayed on the screen for a smooth user experience.
