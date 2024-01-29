@@ -16,3 +16,4 @@ This project implements a responsive chatbot using the ChatGPT 3.5 API through S
    git clone https://github.com/yourusername/streamlit-chatbot.git
 2. **Install Dependencies:**
 ```bash
+pip install -r requirements.txt
