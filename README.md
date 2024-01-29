@@ -21,5 +21,5 @@ This project implements a responsive chatbot using the ChatGPT 3.5 API through S
     Sign up on the OpenAI platform and obtain the ChatGPT 3.5 API key. Replace 'YOUR_API_KEY' in the code with your actual key.
 4. **Run the Streamlit App:**
    ```bash
-   streamlit run chatbot_app.py
+   streamlit run main.py
 
