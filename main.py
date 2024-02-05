@@ -4,7 +4,7 @@ import openai
 from config import open_api_key
 openai.api_key = open_api_key
 # openAI code
-ừbwjfbdjbfw
+ừbwjfbdjbf
 def openai_create(prompt):
     response = openai.Completion.create(
         model="text-davinci-003",
